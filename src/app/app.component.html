@@ -5,5 +5,8 @@
   <img [src]="imgUrl" alt="BridgeLabz Logo" width="200" (click)="openWebsite()">
 
   <!-- UC4: User Input for Name -->
-  <input type="text" [(ngModel)]="userName" placeholder="Enter your name">
+  <input type="text" [(ngModel)]="userName" (input)="validateName()" placeholder="Enter your name">
+
+  <!-- UC5: Display Error Message -->
+  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
 </div>
