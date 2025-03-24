@@ -1,2 +1,9 @@
-<h1>{{ title }}</h1>
-<img [src]="imgUrl" alt="BridgeLabz Logo" width="200" (click)="openWebsite()">
+<div class="container">
+  <h1>Hello from BridgeLabz, {{ userName }}</h1>
+
+  <!-- UC2: Display Image -->
+  <img [src]="imgUrl" alt="BridgeLabz Logo" width="200" (click)="openWebsite()">
+
+  <!-- UC4: User Input for Name -->
+  <input type="text" [(ngModel)]="userName" placeholder="Enter your name">
+</div>
